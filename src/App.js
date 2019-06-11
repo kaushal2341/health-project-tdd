@@ -1,24 +1,24 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {TextInput} from './common-ui';
+import PasswordInput from './common-ui/PasswordInput';
+import ButtonInput from './common-ui/ButtonInput';
 
 function App() {
+  const onChangeHandler = (e)=>{
+    console.log(e)
+  }
+  const onClickHandler = (e)=>{
+    console.log(e)
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <TextInput type="text" onChangeHandler={onChangeHandler}/>
+      <br/>
+      <PasswordInput onChangeHandler={onChangeHandler}/>
+      <br/>
+      <ButtonInput type="button" variant="contained" onClickHandler={onClickHandler} buttonName="Reset"></ButtonInput>
     </div>
   );
 }

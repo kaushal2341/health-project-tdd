@@ -1,0 +1,122 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button Component Snap Shot Testing should create or match previous snapshot of the component 1`] = `
+<ButtonInput
+  buttonName="Submit"
+  onClickHandler={[MockFunction]}
+  type="submit"
+>
+  <WithStyles(ForwardRef(Button))
+    onClick={[Function]}
+    type="submit"
+  >
+    <ForwardRef(Button)
+      classes={
+        Object {
+          "colorInherit": "MuiButton-colorInherit",
+          "contained": "MuiButton-contained",
+          "containedPrimary": "MuiButton-containedPrimary",
+          "containedSecondary": "MuiButton-containedSecondary",
+          "disabled": "Mui-disabled",
+          "focusVisible": "Mui-focusVisible",
+          "fullWidth": "MuiButton-fullWidth",
+          "label": "MuiButton-label",
+          "outlined": "MuiButton-outlined",
+          "outlinedPrimary": "MuiButton-outlinedPrimary",
+          "outlinedSecondary": "MuiButton-outlinedSecondary",
+          "root": "MuiButton-root",
+          "sizeLarge": "MuiButton-sizeLarge",
+          "sizeSmall": "MuiButton-sizeSmall",
+          "text": "MuiButton-text",
+          "textPrimary": "MuiButton-textPrimary",
+          "textSecondary": "MuiButton-textSecondary",
+        }
+      }
+      onClick={[Function]}
+      type="submit"
+    >
+      <WithStyles(ForwardRef(ButtonBase))
+        className="MuiButton-root MuiButton-text"
+        component="button"
+        disabled={false}
+        focusRipple={true}
+        focusVisibleClassName="Mui-focusVisible"
+        onClick={[Function]}
+        type="submit"
+      >
+        <ForwardRef(ButtonBase)
+          className="MuiButton-root MuiButton-text"
+          classes={
+            Object {
+              "disabled": "Mui-disabled",
+              "focusVisible": "Mui-focusVisible",
+              "root": "MuiButtonBase-root",
+            }
+          }
+          component="button"
+          disabled={false}
+          focusRipple={true}
+          focusVisibleClassName="Mui-focusVisible"
+          onClick={[Function]}
+          type="submit"
+        >
+          <button
+            className="MuiButtonBase-root MuiButton-root MuiButton-text"
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex={0}
+            type="submit"
+          >
+            <span
+              className="MuiButton-label"
+            >
+              Submit
+            </span>
+            <NoSsr>
+              <WithStyles(TouchRipple)
+                center={false}
+              >
+                <TouchRipple
+                  center={false}
+                  classes={
+                    Object {
+                      "child": "MuiTouchRipple-child",
+                      "childLeaving": "MuiTouchRipple-childLeaving",
+                      "childPulsate": "MuiTouchRipple-childPulsate",
+                      "ripple": "MuiTouchRipple-ripple",
+                      "ripplePulsate": "MuiTouchRipple-ripplePulsate",
+                      "rippleVisible": "MuiTouchRipple-rippleVisible",
+                      "root": "MuiTouchRipple-root",
+                    }
+                  }
+                >
+                  <span
+                    className="MuiTouchRipple-root"
+                  >
+                    <TransitionGroup
+                      childFactory={[Function]}
+                      component={null}
+                      enter={true}
+                      exit={true}
+                    />
+                  </span>
+                </TouchRipple>
+              </WithStyles(TouchRipple)>
+            </NoSsr>
+          </button>
+        </ForwardRef(ButtonBase)>
+      </WithStyles(ForwardRef(ButtonBase))>
+    </ForwardRef(Button)>
+  </WithStyles(ForwardRef(Button))>
+</ButtonInput>
+`;
