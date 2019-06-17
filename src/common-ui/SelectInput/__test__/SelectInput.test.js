@@ -27,7 +27,8 @@ describe('SelectInput Component', () => {
     expect(wrapper.prop('options')).toEqual([{key:'hello',text:'me',value:'i'},{key:'hi',text:'you',value:'yours'}]);    
     })
     it('should have the given props available',() => {
-    const propsToCheck =['additionLabel',
+    const propsToCheck =['name',
+                         'additionLabel',
                          'additionPosition',
                          'allowAdditions',
                          'as',

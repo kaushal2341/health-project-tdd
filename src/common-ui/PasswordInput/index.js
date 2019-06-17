@@ -1,5 +1,6 @@
 import React from 'react';
 import Proptypes from 'prop-types';
+import {Icon} from 'semantic-ui-react'
 class PasswordInput extends React.PureComponent{
     state={
           errorMsg:"",
@@ -66,7 +67,7 @@ class PasswordInput extends React.PureComponent{
             required={this.props.required}
             readOnly={this.props.readonly}
             />
-            <i style={{"fontSize":"24px"}} className="fa" onClick={this.onSeePassword}>&#xf06e;</i>
+            <button className="btn btn-sm" onClick={this.onSeePassword}><Icon className={!this.state.showPassword ? 'eye' : 'eye slash'}/></button>
             <span id="error">{this.state.errorMsg}</span>
             </>
             )

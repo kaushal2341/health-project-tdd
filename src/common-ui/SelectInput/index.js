@@ -1,13 +1,18 @@
 import React from 'react';
 import  {Dropdown} from 'semantic-ui-react';
 export default class SelectInput extends React.PureComponent {
-   onChangeHandler = e => {
+   onChangeHandler = (e , data) => {
+     console.log(data);
+     e.target.value=data.value
+     e.target.name=data.name
+
      this.props.onChangeHandler(e);
    }       
    render(){
      return(
       <>
       <Dropdown
+       name={this.props.name}
        additionLabel={this.props.additionLabel}
        additionPosition={this.props.additionPosition}
        allowAdditions={this.props.allowAdditions}
@@ -16,12 +21,10 @@ export default class SelectInput extends React.PureComponent {
        button={this.props.button}
        children={this.props.children}
        className={this.props.className}
-       multiple={this.props.multiple}
        clearable={this.props.clearable}
        closeOnChange={this.props.closeOnChange}
        compact={this.props.compact}
        deburr={this.props.deburr}
-       open={this.props.open}
        defaultOpen={this.props.defaultOpen}
        defaultUpward={this.props.defaultUpward}
        defaultValue={this.props.defaultValue}
@@ -32,7 +35,6 @@ export default class SelectInput extends React.PureComponent {
        floating={this.props.floating}
        fluid= {this.props.flluid}
        header={this.props.header} 
-       icon={this.props.icon}
        inline={this.props.inline}
        item={this.props.item}
        labeled={this.props.labeled}
@@ -43,7 +45,7 @@ export default class SelectInput extends React.PureComponent {
        noResultsMessage={this.props.noResultsMessage}
        onAddItem={this.props.onAddItem}
        onBlur={this.props.onBlur}
-       onChange={this.onChangeHandler}
+       onChange={(event,data) => this.onChangeHandler(event,data)}
        onClick={this.props.onClick}
        onClose={this.props.onClose}
        onFocus={this.props.onFocus}
