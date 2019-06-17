@@ -3,7 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 import {TextInput} from './common-ui';
 import PasswordInput from './common-ui/PasswordInput';
-import ButtonInput from './common-ui/ButtonInput';
+//import ButtonInput from './common-ui/ButtonInput';
+import SelectInput from './common-ui/SelectInput';
 
 function App() {
   const onChangeHandler = (e)=>{
@@ -18,7 +19,9 @@ function App() {
       <br/>
       <PasswordInput onChangeHandler={onChangeHandler}/>
       <br/>
-      <ButtonInput type="button" variant="contained" onClickHandler={onClickHandler} buttonName="Reset"></ButtonInput>
+      {/* <ButtonInput type="button" variant="contained" onClickHandler={onClickHandler} buttonName="Reset"></ButtonInput>
+       <br></br> */}
+      <SelectInput></SelectInput>
     </div>
   );
 }

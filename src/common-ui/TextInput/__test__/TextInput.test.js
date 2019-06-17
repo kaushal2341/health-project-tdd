@@ -1,5 +1,4 @@
 import React from 'react';
-//import {mount} from 'enzyme';
 import TextInput from '..';
 import ReactDOM from 'react-dom';
 expect.addSnapshotSerializer(enzymeSerializer);
@@ -41,7 +40,8 @@ describe('TextInput Component',()=>{
         });
     });
     describe('Simulation of input event',()=>{
-    let changeCallback;
+    let changeCallback,
+        valueToCheck;
     function simulation(value){
         changeCallback = jest.spyOn(wrapper.instance(),'onChangeHandler');
         wrapper.instance().forceUpdate(); 
@@ -52,18 +52,27 @@ describe('TextInput Component',()=>{
         expect(onChangeMock2).toHaveBeenCalledTimes(1);
     });
 
-    it('should not call the props onChangeHandler function when input value is invalid',()=>{
+    it('should have set shouldCall value false input value is invalid',()=>{
         simulation({target:{value:'abc@'}})
         expect(onChangeMock2).not.toBeCalled();
     });
-    
+
     it('should show error when input value is invalid',()=>{
         simulation({target:{value:'abc@'}})
         expect(wrapper.state('errorMsg')).toEqual('Email Was Not Matched')
     });
-    it('should call the function onChangeHandler when the input is change',()=>{
+    it('should call the function when input value doesnot contain @ character',() => {
+        simulation({target:{value:'abc'}})
+        expect(onChangeMock2).toHaveBeenCalled();
+    });
+    it('should call the function onChangeHandler when the input is change',() => {
         expect(changeCallback).toHaveBeenCalled();    
-      });
+    });
+    it('should not call the props function when type is not equal to text',() => {
+        const wrapper2=mount(<TextInput type="number" onChangeHandler={onChangeMock2}></TextInput>)
+        wrapper2.find('input').simulate('change',{target:{value:123}});
+        expect(onChangeMock2).not.toHaveBeenCalled(); 
+    })
     describe('Snap Shot Testing',()=>{
         it('should match the previous snapshot/if new then create a new snapshot',()=>{
             expect(wrapper).toMatchSnapshot();

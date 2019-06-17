@@ -1,6 +1,6 @@
 import React from 'react';
-import ButtonInput from '..'
-import { Button } from '@material-ui/core';
+import ButtonInput from '..';
+import { Button } from 'semantic-ui-react';
 
 expect.addSnapshotSerializer(enzymeSerializer);
 describe('Button Component', () => {
@@ -27,10 +27,40 @@ describe('Button Component', () => {
     })
 
     it('should  have the exactly given props props',()=>{
-        const propsToCheck= ['id','type','children','classes','onClick','fullWidth','size','disabled','href','variant','component','disableFocusRipple','disableRipple','color'];
+        const propsToCheck = 
+        ['id',
+        'type',
+        'active',
+        'animated',
+        'as',
+        'attached',
+        'basic',
+        'children',
+        'circular',
+        'className', 
+        'color',
+        'compact',
+        'content',
+        'disabled',
+        'floated',
+        'fluid',
+        'icon',
+        'inverted',
+        'label',
+        'labelPosition',
+        'loading',
+        'negative',
+        'onClick',
+        'positive',
+        'primary',
+        'role',
+        'secondary',
+        'size',
+        'tabIndex',
+        'toggle'];
         let buttonInputPropsKeys=Object.keys(wrapper.find(Button).props());
         propsToCheck.map((reqProp,i)=>{
-            expect(reqProp).toContain(buttonInputPropsKeys[i]);
+            expect(propsToCheck).toContain(buttonInputPropsKeys[i]);
         })        
     });
     it('should only have type of submit or button', ()=>{

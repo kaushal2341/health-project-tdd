@@ -5,7 +5,7 @@ import Proptypes from 'prop-types'
       super();
       this.state={errorMsg:""};
    }
-   checkType = type => type !== 'text' ?false :true
+   checkType = type => type !== 'text' ? false :true
 
    setStateOfComponent = value => {
      this.setState({errorMsg:value})
@@ -32,10 +32,7 @@ import Proptypes from 'prop-types'
    {
         if(this.checkType(this.props.type)) 
          return this.checkValidityOfEmail(value);   
-        else{
-
-        }
-         return true; 
+        return false; 
     }    
     
     onChangeHandler = e =>

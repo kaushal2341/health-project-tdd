@@ -1,0 +1,260 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SelectInput Component Snap Shot Testing should create or match previous snapshot of the component 1`] = `
+<SelectInput
+  onChangeHandler={[MockFunction]}
+  options={
+    Array [
+      Object {
+        "key": "hello",
+        "text": "me",
+        "value": "i",
+      },
+      Object {
+        "key": "hi",
+        "text": "you",
+        "value": "yours",
+      },
+    ]
+  }
+  value="hello"
+>
+  <Dropdown
+    additionLabel="Add "
+    additionPosition="top"
+    closeOnBlur={true}
+    deburr={false}
+    icon="dropdown"
+    minCharacters={1}
+    noResultsMessage="No results found."
+    onChange={[Function]}
+    openOnFocus={true}
+    options={
+      Array [
+        Object {
+          "key": "hello",
+          "text": "me",
+          "value": "i",
+        },
+        Object {
+          "key": "hi",
+          "text": "you",
+          "value": "yours",
+        },
+      ]
+    }
+    renderLabel={[Function]}
+    searchInput="text"
+    selectOnBlur={true}
+    selectOnNavigation={true}
+    value="hello"
+    wrapSelection={true}
+  >
+    <Ref
+      innerRef={
+        Object {
+          "current": <div
+            aria-expanded="false"
+            class="ui dropdown"
+            role="listbox"
+            tabindex="0"
+          >
+            <div
+              aria-live="polite"
+              class="text"
+              role="alert"
+            />
+            <i
+              aria-hidden="true"
+              class="dropdown icon"
+            />
+            <div
+              class="menu transition"
+            >
+              <div
+                aria-checked="false"
+                aria-selected="true"
+                class="selected item"
+                role="option"
+                style="pointer-events: all;"
+              >
+                <span
+                  class="text"
+                >
+                  me
+                </span>
+              </div>
+              <div
+                aria-checked="false"
+                aria-selected="false"
+                class="item"
+                role="option"
+                style="pointer-events: all;"
+              >
+                <span
+                  class="text"
+                >
+                  you
+                </span>
+              </div>
+            </div>
+          </div>,
+        }
+      }
+    >
+      <RefFindNode
+        innerRef={
+          Object {
+            "current": <div
+              aria-expanded="false"
+              class="ui dropdown"
+              role="listbox"
+              tabindex="0"
+            >
+              <div
+                aria-live="polite"
+                class="text"
+                role="alert"
+              />
+              <i
+                aria-hidden="true"
+                class="dropdown icon"
+              />
+              <div
+                class="menu transition"
+              >
+                <div
+                  aria-checked="false"
+                  aria-selected="true"
+                  class="selected item"
+                  role="option"
+                  style="pointer-events: all;"
+                >
+                  <span
+                    class="text"
+                  >
+                    me
+                  </span>
+                </div>
+                <div
+                  aria-checked="false"
+                  aria-selected="false"
+                  class="item"
+                  role="option"
+                  style="pointer-events: all;"
+                >
+                  <span
+                    class="text"
+                  >
+                    you
+                  </span>
+                </div>
+              </div>
+            </div>,
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          className="ui dropdown"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onMouseDown={[Function]}
+          role="listbox"
+          tabIndex={0}
+        >
+          <div
+            aria-live="polite"
+            className="text"
+            role="alert"
+          />
+          <Icon
+            as="i"
+            className=""
+            name="dropdown"
+            onClick={[Function]}
+          >
+            <i
+              aria-hidden="true"
+              className="dropdown icon"
+              onClick={[Function]}
+            />
+          </Icon>
+          <DropdownMenu>
+            <div
+              className="menu transition"
+            >
+              <DropdownItem
+                active={false}
+                key="hello"
+                onClick={[Function]}
+                selected={true}
+                style={
+                  Object {
+                    "pointerEvents": "all",
+                  }
+                }
+                text="me"
+                value="i"
+              >
+                <div
+                  aria-checked={false}
+                  aria-selected={true}
+                  className="selected item"
+                  onClick={[Function]}
+                  role="option"
+                  style={
+                    Object {
+                      "pointerEvents": "all",
+                    }
+                  }
+                >
+                  <span
+                    className="text"
+                  >
+                    me
+                  </span>
+                </div>
+              </DropdownItem>
+              <DropdownItem
+                active={false}
+                key="hi"
+                onClick={[Function]}
+                selected={false}
+                style={
+                  Object {
+                    "pointerEvents": "all",
+                  }
+                }
+                text="you"
+                value="yours"
+              >
+                <div
+                  aria-checked={false}
+                  aria-selected={false}
+                  className="item"
+                  onClick={[Function]}
+                  role="option"
+                  style={
+                    Object {
+                      "pointerEvents": "all",
+                    }
+                  }
+                >
+                  <span
+                    className="text"
+                  >
+                    you
+                  </span>
+                </div>
+              </DropdownItem>
+            </div>
+          </DropdownMenu>
+        </div>
+      </RefFindNode>
+    </Ref>
+  </Dropdown>
+</SelectInput>
+`;

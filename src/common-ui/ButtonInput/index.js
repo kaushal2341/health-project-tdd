@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button} from '@material-ui/core'
+import {Button} from 'semantic-ui-react'
 import Proptypes from 'prop-types'
 export default class ButtonInput extends React.PureComponent {
 onClickHandler = ()=>{
@@ -11,18 +11,34 @@ render() {
         <Button
         id={this.props.id}
         type={this.props.type}
+        active={this.props.active}
+        animated={this.props.animated}
+        as={this.props.as}
+        attached={this.props.attached}
+        basic={this.props.basic}
         children={this.props.children}
-        classes={this.props.classes}
-        onClick={this.onClickHandler}
-        fullWidth={this.props.fullWidth}
-        size={this.props.size}
-        disabled={this.props.disabled}
-        href={this.props.href}
-        variant={this.props.variant}
-        component={this.props.component}
-        disableFocusRipple={this.props.disableFocusRipple}
-        disableRipple={this.props.disableRipple}
+        circular={this.props.circular}
+        className={this.props.className} 
         color={this.props.color}
+        compact={this.props.compact}
+        content={this.props.content}
+        disabled={this.props.disabled}
+        floated={this.props.floated}
+        fluid={this.props.fluid}
+        icon={this.props.icon}
+        inverted={this.props.inverted}
+        label={this.props.label}
+        labelPosition={this.props.labelPosition}
+        loading={this.props.loading}
+        negative={this.props.negative}
+        onClick={this.onClickHandler}
+        positive={this.props.positive}
+        primary={this.props.primary}
+        role={this.props.role}
+        secondary={this.props.secondary}
+        size={this.props.size}
+        tabIndex={this.props.tabIndex}
+        toggle={this.props.toggle}
         >
         {this.props.buttonName}
         </Button>
