@@ -1,6 +1,7 @@
 import React from 'react';
 import TextInput from '..';
 import ReactDOM from 'react-dom';
+import {Input} from 'semantic-ui-react';
 expect.addSnapshotSerializer(enzymeSerializer);
 describe('TextInput Component',()=>{
     let wrapper;
@@ -33,10 +34,38 @@ describe('TextInput Component',()=>{
     });
 
     it('should have the given props',()=>{
-        let propsObj=['id','name','type','minLength','maxLength','onChange','onBlur','onFocus','className','placeholder','required','readOnly'];
-        let propsInInput =Object.keys(wrapper.find('input').props());
+        let propsObj=['id',
+                      'name',
+                      'type',
+                      'minLength',
+                      'maxLength',
+                      'onChange',
+                      'onBlur',
+                      'onFocus',
+                      'className',
+                      'placeholder',
+                      'required',
+                      'readOnly',
+                      'children',
+                      'error',
+                      'fluid',
+                      'focus',
+                      'icon',
+                      'iconPosition',
+                      'inverted',
+                      'label',
+                      'labelPosition',
+                      'loading',
+                      'size',
+                      'transparent',
+                      'tabIndex',
+                      'action',
+                      'actionPosition',
+                      'disabled'
+                    ];
+        let propsInInput =Object.keys(wrapper.find(Input).props());
         propsObj.map((propObj,i)=>{
-             expect(propsInInput[i]).toEqual(propObj); 
+             expect(propsObj).toContain(propsInInput[i]); 
         });
     });
     describe('Simulation of input event',()=>{
@@ -79,4 +108,5 @@ describe('TextInput Component',()=>{
         });
     })
 });
-})
+});
+

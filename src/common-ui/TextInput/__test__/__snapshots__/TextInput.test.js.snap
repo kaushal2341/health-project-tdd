@@ -5,10 +5,19 @@ exports[`TextInput Component Simulation of input event Snap Shot Testing should 
   onChangeHandler={[MockFunction]}
   type="text"
 >
-  <input
+  <Input
     onChange={[Function]}
     type="text"
-  />
+  >
+    <div
+      className="ui input"
+    >
+      <input
+        onChange={[Function]}
+        type="text"
+      />
+    </div>
+  </Input>
   <span
     id="error"
   />

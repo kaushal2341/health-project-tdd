@@ -1,6 +1,7 @@
 import React from 'react';
 import Proptypes from 'prop-types';
-import {Icon} from 'semantic-ui-react'
+import {Icon, Input} from 'semantic-ui-react';
+import ButtonInput from '../ButtonInput';
 class PasswordInput extends React.PureComponent{
     state={
           errorMsg:"",
@@ -52,8 +53,9 @@ class PasswordInput extends React.PureComponent{
      }))
     }
     render(){
+      const iconInput=<Icon className={!this.state.showPassword ? 'eye' : 'eye slash'}/>
      return(<>
-            <input 
+            <Input 
             id={this.props.id}
             name={this.props.name}
             type={this.state.showPassword ? "password" : "text"}
@@ -66,8 +68,25 @@ class PasswordInput extends React.PureComponent{
             placeholder={this.props.placeholder}
             required={this.props.required}
             readOnly={this.props.readonly}
+            children={this.props.children}
+            error={this.props.error}
+            fluid={this.props.fluid}
+            focus={this.props.focus}
+            icon={this.props.icon}
+            disabled={this.props.disabled}
+            iconPosition={this.props.iconPosition}
+            inverted={this.props.inverted}
+            label={this.props.label}
+            labelPosition={this.props.labelPosition}
+            loading={this.props.loading}
+            size={this.props.size}
+            transparent={this.props.transparent}
+            tabIndex={this.props.tabIndex}
+            action={this.props.action}
+            actionPosition={this.props.actionPosition}
             />
-            <button className="btn btn-sm" onClick={this.onSeePassword}><Icon className={!this.state.showPassword ? 'eye' : 'eye slash'}/></button>
+            &nbsp;
+            <ButtonInput size="tiny" onClickHandler={this.onSeePassword} children={iconInput}/>
             <span id="error">{this.state.errorMsg}</span>
             </>
             )

@@ -16,7 +16,6 @@ render() {
         as={this.props.as}
         attached={this.props.attached}
         basic={this.props.basic}
-        children={this.props.children}
         circular={this.props.circular}
         className={this.props.className} 
         color={this.props.color}
@@ -41,6 +40,7 @@ render() {
         toggle={this.props.toggle}
         >
         {this.props.buttonName}
+        {this.props.children}
         </Button>
         </>
     )

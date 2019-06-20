@@ -1,6 +1,7 @@
 import React from 'react';
-import Proptypes from 'prop-types'
- class TextInput extends React.PureComponent {
+import Proptypes from 'prop-types';
+import {Input} from 'semantic-ui-react';
+class TextInput extends React.PureComponent {
    constructor(){
       super();
       this.state={errorMsg:""};
@@ -47,7 +48,7 @@ import Proptypes from 'prop-types'
  render(){ 
         return(
         <>
-        <input 
+        <Input 
            id={this.props.id}
            name={this.props.name}
            type={this.props.type} 
@@ -60,6 +61,22 @@ import Proptypes from 'prop-types'
            placeholder={this.props.placeholder}
            required={this.props.required}
            readOnly={this.props.readonly}
+           children={this.props.children}
+           error={this.props.error}
+           fluid={this.props.fluid}
+           focus={this.props.focus}
+           icon={this.props.icon}
+           disabled={this.props.disabled}
+           iconPosition={this.props.iconPosition}
+           inverted={this.props.inverted}
+           label={this.props.label}
+           labelPosition={this.props.labelPosition}
+           loading={this.props.loading}
+           size={this.props.size}
+           transparent={this.props.transparent}
+           tabIndex={this.props.tabIndex}
+           action={this.props.action}
+           actionPosition={this.props.actionPosition}
         />
         <span id="error">{this.state.errorMsg}</span>
         </>

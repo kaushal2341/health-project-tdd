@@ -20,7 +20,6 @@ describe('SelectInput Component', () => {
      expect(wrapper.find(Dropdown)).toHaveLength(1); 
     });
     it('should have the prop options available', () => {
-        console.log(wrapper.prop('value'))
     expect(wrapper.prop('options')).toBeDefined();
     });
     it('should have the properties of options equal to key text value',() => {

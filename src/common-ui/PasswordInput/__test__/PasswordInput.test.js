@@ -1,5 +1,6 @@
 import React from 'react';
 import PasswordInput from '..';
+import {Input} from 'semantic-ui-react';
 expect.addSnapshotSerializer(enzymeSerializer);
 describe('Password Input',()=>{
 let wrapper;
@@ -21,10 +22,38 @@ it('should have password input tag element',()=>{
     expect(wrapper.find('input').prop('type')).toBe('password');
 });
 it('should have the given props in input tag element',()=>{
-    const reqProps=['id','name','type','minLength','maxLength','onChange','onBlur','onFocus','className','placeholder','required','readOnly']
-    let passwordInputPropsKeys=Object.keys(wrapper.find('input').props());
+    const reqProps=['id',
+                    'name',
+                    'type',
+                    'minLength',
+                    'maxLength',
+                    'onChange',
+                    'onBlur',
+                    'onFocus',
+                    'className',
+                    'placeholder',
+                    'required',
+                    'readOnly',
+                    'children',
+                    'error',
+                    'fluid',
+                    'focus',
+                    'icon',
+                    'iconPosition',
+                    'inverted',
+                    'label',
+                    'labelPosition',
+                    'loading',
+                    'size',
+                    'transparent',
+                    'tabIndex',
+                    'action',
+                    'actionPosition',
+                    'disabled'
+                  ]
+    let passwordInputPropsKeys=Object.keys(wrapper.find(Input).props());
     reqProps.map((reqProp,i)=>{
-        expect(reqProp).toEqual(passwordInputPropsKeys[i]);
+        expect(reqProps).toContain(passwordInputPropsKeys[i]);
     })
 });
 it('should have one span tag element to show error msg',()=>{
