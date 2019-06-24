@@ -86,7 +86,7 @@ class PasswordInput extends React.PureComponent{
             actionPosition={this.props.actionPosition}
             />
             &nbsp;
-            <ButtonInput size="tiny" onClickHandler={this.onSeePassword} children={iconInput}/>
+            <ButtonInput id="btn_error" size="tiny" onClickHandler={this.onSeePassword} children={iconInput}/>
             <span id="error">{this.state.errorMsg}</span>
             </>
             )

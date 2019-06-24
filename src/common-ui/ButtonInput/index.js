@@ -2,8 +2,8 @@ import React from 'react';
 import {Button} from 'semantic-ui-react'
 import Proptypes from 'prop-types'
 export default class ButtonInput extends React.PureComponent {
-onClickHandler = ()=>{
-    this.props.onClickHandler();
+onClickHandler = (e) => {
+    this.props.onClickHandler(e);
 }
 render() {
     return(

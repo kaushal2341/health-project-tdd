@@ -1,0 +1,505 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login Container Testing Snap Shot Testing should create or match previous snapshot of the component 1`] = `
+<Login>
+  <Form
+    as="form"
+  >
+    <form
+      className="ui form"
+      onSubmit={[Function]}
+    >
+      <TextInput
+        name="username"
+        onChangeHandler={[Function]}
+        placeholder="Username/Email"
+        type="text"
+      >
+        <Input
+          name="username"
+          onChange={[Function]}
+          placeholder="Username/Email"
+          type="text"
+        >
+          <div
+            className="ui input"
+          >
+            <input
+              name="username"
+              onChange={[Function]}
+              placeholder="Username/Email"
+              type="text"
+            />
+          </div>
+        </Input>
+        <span
+          id="error"
+        />
+      </TextInput>
+      <PasswordInput
+        name="password"
+        onChangeHandler={[Function]}
+        placeholder="Password"
+      >
+        <Input
+          name="password"
+          onChange={[Function]}
+          placeholder="Password"
+          type="password"
+        >
+          <div
+            className="ui input"
+          >
+            <input
+              name="password"
+              onChange={[Function]}
+              placeholder="Password"
+              type="password"
+            />
+          </div>
+        </Input>
+         
+        <ButtonInput
+          id="btn_error"
+          onClickHandler={[Function]}
+          size="tiny"
+        >
+          <Button
+            as="button"
+            id="btn_error"
+            onClick={[Function]}
+            size="tiny"
+          >
+            <Ref
+              innerRef={
+                Object {
+                  "current": <button
+                    class="ui tiny button"
+                    id="btn_error"
+                  >
+                    <i
+                      aria-hidden="true"
+                      class="icon eye slash"
+                    />
+                  </button>,
+                }
+              }
+            >
+              <RefFindNode
+                innerRef={
+                  Object {
+                    "current": <button
+                      class="ui tiny button"
+                      id="btn_error"
+                    >
+                      <i
+                        aria-hidden="true"
+                        class="icon eye slash"
+                      />
+                    </button>,
+                  }
+                }
+              >
+                <button
+                  className="ui tiny button"
+                  id="btn_error"
+                  onClick={[Function]}
+                >
+                  <Icon
+                    as="i"
+                    className="eye slash"
+                  >
+                    <i
+                      aria-hidden="true"
+                      className="icon eye slash"
+                      onClick={[Function]}
+                    />
+                  </Icon>
+                </button>
+              </RefFindNode>
+            </Ref>
+          </Button>
+        </ButtonInput>
+        <span
+          id="error"
+        />
+      </PasswordInput>
+      <SelectInput
+        name="subDepartmentId"
+        onChangeHandler={[Function]}
+        options={
+          Array [
+            Object {
+              "key": "1",
+              "text": "Admin",
+              "value": "1",
+            },
+            Object {
+              "key": "2",
+              "text": "Pharmacy",
+              "value": "2",
+            },
+            Object {
+              "key": "3",
+              "text": "Finance",
+              "value": "3",
+            },
+          ]
+        }
+        placeholder="Select DepartMent"
+        selection={true}
+      >
+        <Dropdown
+          additionLabel="Add "
+          additionPosition="top"
+          closeOnBlur={true}
+          deburr={false}
+          icon="dropdown"
+          minCharacters={1}
+          name="subDepartmentId"
+          noResultsMessage="No results found."
+          onChange={[Function]}
+          openOnFocus={true}
+          options={
+            Array [
+              Object {
+                "key": "1",
+                "text": "Admin",
+                "value": "1",
+              },
+              Object {
+                "key": "2",
+                "text": "Pharmacy",
+                "value": "2",
+              },
+              Object {
+                "key": "3",
+                "text": "Finance",
+                "value": "3",
+              },
+            ]
+          }
+          renderLabel={[Function]}
+          searchInput="text"
+          selectOnBlur={true}
+          selectOnNavigation={true}
+          selection={true}
+          wrapSelection={true}
+        >
+          <Ref
+            innerRef={
+              Object {
+                "current": <div
+                  aria-expanded="false"
+                  class="ui selection dropdown"
+                  name="subDepartmentId"
+                  role="listbox"
+                  tabindex="0"
+                >
+                  <div
+                    aria-live="polite"
+                    class="text"
+                    role="alert"
+                  />
+                  <i
+                    aria-hidden="true"
+                    class="dropdown icon"
+                  />
+                  <div
+                    class="menu transition"
+                  >
+                    <div
+                      aria-checked="false"
+                      aria-selected="true"
+                      class="selected item"
+                      role="option"
+                      style="pointer-events: all;"
+                    >
+                      <span
+                        class="text"
+                      >
+                        Admin
+                      </span>
+                    </div>
+                    <div
+                      aria-checked="false"
+                      aria-selected="false"
+                      class="item"
+                      role="option"
+                      style="pointer-events: all;"
+                    >
+                      <span
+                        class="text"
+                      >
+                        Pharmacy
+                      </span>
+                    </div>
+                    <div
+                      aria-checked="false"
+                      aria-selected="false"
+                      class="item"
+                      role="option"
+                      style="pointer-events: all;"
+                    >
+                      <span
+                        class="text"
+                      >
+                        Finance
+                      </span>
+                    </div>
+                  </div>
+                </div>,
+              }
+            }
+          >
+            <RefFindNode
+              innerRef={
+                Object {
+                  "current": <div
+                    aria-expanded="false"
+                    class="ui selection dropdown"
+                    name="subDepartmentId"
+                    role="listbox"
+                    tabindex="0"
+                  >
+                    <div
+                      aria-live="polite"
+                      class="text"
+                      role="alert"
+                    />
+                    <i
+                      aria-hidden="true"
+                      class="dropdown icon"
+                    />
+                    <div
+                      class="menu transition"
+                    >
+                      <div
+                        aria-checked="false"
+                        aria-selected="true"
+                        class="selected item"
+                        role="option"
+                        style="pointer-events: all;"
+                      >
+                        <span
+                          class="text"
+                        >
+                          Admin
+                        </span>
+                      </div>
+                      <div
+                        aria-checked="false"
+                        aria-selected="false"
+                        class="item"
+                        role="option"
+                        style="pointer-events: all;"
+                      >
+                        <span
+                          class="text"
+                        >
+                          Pharmacy
+                        </span>
+                      </div>
+                      <div
+                        aria-checked="false"
+                        aria-selected="false"
+                        class="item"
+                        role="option"
+                        style="pointer-events: all;"
+                      >
+                        <span
+                          class="text"
+                        >
+                          Finance
+                        </span>
+                      </div>
+                    </div>
+                  </div>,
+                }
+              }
+            >
+              <div
+                aria-expanded={false}
+                className="ui selection dropdown"
+                name="subDepartmentId"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onMouseDown={[Function]}
+                role="listbox"
+                tabIndex={0}
+              >
+                <div
+                  aria-live="polite"
+                  className="text"
+                  role="alert"
+                />
+                <Icon
+                  as="i"
+                  className=""
+                  name="dropdown"
+                  onClick={[Function]}
+                >
+                  <i
+                    aria-hidden="true"
+                    className="dropdown icon"
+                    onClick={[Function]}
+                  />
+                </Icon>
+                <DropdownMenu>
+                  <div
+                    className="menu transition"
+                  >
+                    <DropdownItem
+                      active={false}
+                      key="1"
+                      onClick={[Function]}
+                      selected={true}
+                      style={
+                        Object {
+                          "pointerEvents": "all",
+                        }
+                      }
+                      text="Admin"
+                      value="1"
+                    >
+                      <div
+                        aria-checked={false}
+                        aria-selected={true}
+                        className="selected item"
+                        onClick={[Function]}
+                        role="option"
+                        style={
+                          Object {
+                            "pointerEvents": "all",
+                          }
+                        }
+                      >
+                        <span
+                          className="text"
+                        >
+                          Admin
+                        </span>
+                      </div>
+                    </DropdownItem>
+                    <DropdownItem
+                      active={false}
+                      key="2"
+                      onClick={[Function]}
+                      selected={false}
+                      style={
+                        Object {
+                          "pointerEvents": "all",
+                        }
+                      }
+                      text="Pharmacy"
+                      value="2"
+                    >
+                      <div
+                        aria-checked={false}
+                        aria-selected={false}
+                        className="item"
+                        onClick={[Function]}
+                        role="option"
+                        style={
+                          Object {
+                            "pointerEvents": "all",
+                          }
+                        }
+                      >
+                        <span
+                          className="text"
+                        >
+                          Pharmacy
+                        </span>
+                      </div>
+                    </DropdownItem>
+                    <DropdownItem
+                      active={false}
+                      key="3"
+                      onClick={[Function]}
+                      selected={false}
+                      style={
+                        Object {
+                          "pointerEvents": "all",
+                        }
+                      }
+                      text="Finance"
+                      value="3"
+                    >
+                      <div
+                        aria-checked={false}
+                        aria-selected={false}
+                        className="item"
+                        onClick={[Function]}
+                        role="option"
+                        style={
+                          Object {
+                            "pointerEvents": "all",
+                          }
+                        }
+                      >
+                        <span
+                          className="text"
+                        >
+                          Finance
+                        </span>
+                      </div>
+                    </DropdownItem>
+                  </div>
+                </DropdownMenu>
+              </div>
+            </RefFindNode>
+          </Ref>
+        </Dropdown>
+      </SelectInput>
+      <ButtonInput
+        buttonName="Submit"
+        onClickHandler={[Function]}
+        type="submit"
+      >
+        <Button
+          as="button"
+          onClick={[Function]}
+          type="submit"
+        >
+          <Ref
+            innerRef={
+              Object {
+                "current": <button
+                  class="ui button"
+                  type="submit"
+                >
+                  Submit
+                </button>,
+              }
+            }
+          >
+            <RefFindNode
+              innerRef={
+                Object {
+                  "current": <button
+                    class="ui button"
+                    type="submit"
+                  >
+                    Submit
+                  </button>,
+                }
+              }
+            >
+              <button
+                className="ui button"
+                onClick={[Function]}
+                type="submit"
+              >
+                Submit
+              </button>
+            </RefFindNode>
+          </Ref>
+        </Button>
+      </ButtonInput>
+    </form>
+  </Form>
+</Login>
+`;
