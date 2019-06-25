@@ -4,7 +4,8 @@ import {
   Form,
   Input,
   Dropdown,
-  Button
+  Button,
+  Message
 } from 'semantic-ui-react';
 import {
   TextInput,
@@ -95,6 +96,10 @@ describe('Login Container Testing', () => {
           })
         });
 
+        it('should have atleast one Message field' , () => {
+          expect(wrapper.find(Message)).toHaveLength(1);
+        })
+
         describe('Input Simulation Change', () => {
           it('should change the value of state of username when Text Input is changed', () => {
             wrapper.find(TextInput).find(Input).find('input').simulate('change', {
@@ -120,8 +125,13 @@ describe('Login Container Testing', () => {
               let event = {
                 target: {
                   name: "",
+                  value:1,
                   text: 1
                 }
+              }
+             let data={
+                name:"subDepartmentId",
+                value:1
               }
               wrapper.find(PasswordInput).find(Input).find('input').simulate('change', {
                 target: {
@@ -135,7 +145,8 @@ describe('Login Container Testing', () => {
                   value: "kaushal@gmail.com"
                 }
               });
-              wrapper.find(SelectInput).find(Dropdown).simulate('change', event);
+
+              wrapper.find(SelectInput).find(Dropdown).simulate('change',event,data);
             });
 
             it('should change the value of state of subDepartment when Select Input is changed', () => {
@@ -176,7 +187,7 @@ describe('Login Container Testing', () => {
                  password:'flasher@123',
                  subDepartmentId:1
                })
-               expect(wrapper.state('errorMsg').length).toBe(0);
+               expect(wrapper.state('errorMsg').length).toBe(0)
             })
           })
 

@@ -3,9 +3,9 @@ import  {Dropdown} from 'semantic-ui-react';
 export default class SelectInput extends React.PureComponent {
    onChangeHandler = (e , data) => {
      const myEvent = {...e}
-     myEvent.target.value=myEvent.target.text
-     myEvent.target.name=data.name
-     this.props.onChangeHandler(myEvent);
+     myEvent.target.value = e.target.value ? e.target.value : data.value
+     myEvent.target.name = data.name
+     this.props.onChangeHandler( myEvent );
    }       
    render(){
      return(

@@ -14,12 +14,14 @@ exports[`Login Container Testing Snap Shot Testing should create or match previo
         onChangeHandler={[Function]}
         placeholder="Username/Email"
         type="text"
+        value=""
       >
         <Input
           name="username"
           onChange={[Function]}
           placeholder="Username/Email"
           type="text"
+          value=""
         >
           <div
             className="ui input"
@@ -29,6 +31,7 @@ exports[`Login Container Testing Snap Shot Testing should create or match previo
               onChange={[Function]}
               placeholder="Username/Email"
               type="text"
+              value=""
             />
           </div>
         </Input>
@@ -146,7 +149,7 @@ exports[`Login Container Testing Snap Shot Testing should create or match previo
             },
           ]
         }
-        placeholder="Select DepartMent"
+        placeholder="Select Department"
         selection={true}
       >
         <Dropdown
@@ -499,6 +502,13 @@ exports[`Login Container Testing Snap Shot Testing should create or match previo
           </Ref>
         </Button>
       </ButtonInput>
+      <Message
+        negative={true}
+      >
+        <div
+          className="ui negative message"
+        />
+      </Message>
     </form>
   </Form>
 </Login>

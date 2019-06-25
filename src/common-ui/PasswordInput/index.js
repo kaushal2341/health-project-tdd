@@ -44,7 +44,6 @@ class PasswordInput extends React.PureComponent{
       const {value} = e.target
       shouldCall=this.checkValidLength(value);
       this.checkPasswordPolicy(value,shouldCall);
-      if(shouldCall)
       this.props.onChangeHandler(e);
     }
     onSeePassword = (e) => {
@@ -84,6 +83,7 @@ class PasswordInput extends React.PureComponent{
             tabIndex={this.props.tabIndex}
             action={this.props.action}
             actionPosition={this.props.actionPosition}
+            value ={this.props.value}
             />
             &nbsp;
             <ButtonInput id="btn_error" size="tiny" onClickHandler={this.onSeePassword} children={iconInput}/>
@@ -103,6 +103,8 @@ React.propTypes ={
     classes:Proptypes.string,
     placeholder:Proptypes.string,
     required:Proptypes.bool,
-    readOnly:Proptypes.bool
-}
+    readOnly:Proptypes.bool,
+    value:Proptypes.string
+    }
+
 export default PasswordInput;

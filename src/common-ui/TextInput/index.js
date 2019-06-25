@@ -6,7 +6,7 @@ class TextInput extends React.PureComponent {
       super();
       this.state={errorMsg:""};
    }
-   checkType = type => type !== 'text' ? false :true
+   // checkType = type => type !== 'text' ? false :true
 
    setStateOfComponent = value => {
      this.setState({errorMsg:value})
@@ -14,34 +14,31 @@ class TextInput extends React.PureComponent {
    checkValidityOfEmail = value => 
    {
     const emailPattern = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
-    let shouldCall =false;
     let errValue = "";
     if(value.includes('@'))
-     if (value.match(emailPattern))
-      shouldCall = true;     
-     else
-      errValue = "Email Was Not Matched"; 
-     else
-      shouldCall=true;
+      if (!value.match(emailPattern))
+         errValue = "Email Was Not Matched"; 
     
    this.setStateOfComponent(errValue);
-   return shouldCall; 
+   //return shouldCall; 
        
    }
     
    shouldCallChangeHandlerOfAnotherComp =  value =>
    {
-        if(this.checkType(this.props.type)) 
-         return this.checkValidityOfEmail(value);   
-        return false; 
+        //if(this.checkType(this.props.type)) 
+         //return 
+         this.checkValidityOfEmail(value);   
+        //return false; 
     }    
     
     onChangeHandler = e =>
     {
      let value = e.target.value;   
-     let shouldCall = false;
-     shouldCall = this.shouldCallChangeHandlerOfAnotherComp(value);
-     if(shouldCall)
+     //let shouldCall = false;
+     //shouldCall =
+      this.shouldCallChangeHandlerOfAnotherComp(value);
+     //if(shouldCall)
        this.props.onChangeHandler(e);
     }
     
@@ -51,7 +48,7 @@ class TextInput extends React.PureComponent {
         <Input 
            id={this.props.id}
            name={this.props.name}
-           type={this.props.type} 
+           type="text" 
            minLength={this.props.min}
            maxLength={this.props.max}
            onChange={this.onChangeHandler}
@@ -77,6 +74,7 @@ class TextInput extends React.PureComponent {
            tabIndex={this.props.tabIndex}
            action={this.props.action}
            actionPosition={this.props.actionPosition}
+           value={this.props.value}
         />
         <span id="error">{this.state.errorMsg}</span>
         </>
@@ -95,7 +93,8 @@ React.propTypes ={
     classes:Proptypes.string,
     placeholder:Proptypes.string,
     required:Proptypes.bool,
-    readOnly:Proptypes.bool
+    readOnly:Proptypes.bool,
+    value:Proptypes.string
 }
 export default TextInput;
 
