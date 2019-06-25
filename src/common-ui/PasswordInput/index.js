@@ -39,14 +39,15 @@ class PasswordInput extends React.PureComponent{
         if(errorValueToBeSet)
            this.setTheState(errorValueToBeSet);
     }
-    onChangeHandler = (e)=>{
+    onChangeHandler = e => {
       let shouldCall=true;
       const {value} = e.target
       shouldCall=this.checkValidLength(value);
       this.checkPasswordPolicy(value,shouldCall);
       this.props.onChangeHandler(e);
     }
-    onSeePassword = (e) => {
+
+    onSeePassword = e => {
      this.setState((prevState)=>({
        showPassword:!prevState.showPassword 
      }))
