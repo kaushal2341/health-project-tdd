@@ -3,14 +3,12 @@ import Login from '..';
 import {
   Form,
   Input,
-  Dropdown,
   Button,
   Message
 } from 'semantic-ui-react';
 import {
   TextInput,
   PasswordInput,
-  SelectInput,
   ButtonInput
 } from '../../../common-ui';
 expect.addSnapshotSerializer(enzymeSerializer);
