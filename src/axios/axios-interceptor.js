@@ -4,8 +4,7 @@ axios.defaults.baseURL = "";
 
 axios.interceptors.request.use(
     requestConfig => {
-        requestConfig.headers.Authorization = token;
-        // requestConfig.headers.Origin = "url Of Other Domain";
+        requestConfig.headers.Authorization = requestConfig.header;
         return requestConfig;
     }, error => {
         Promise.reject(error);
@@ -14,8 +13,8 @@ axios.interceptors.request.use(
 
 axios.interceptors.response.use(
     response => {
-        // TO STORE THE JWT TOKEN FROM RESPONSE
-        // let jwtToken = response.headers.Authorization;
+        // TO STORE THE JWT TOKEN F ROM RESPONSE
+       let jwtToken = response.headers.Authorization;
         return response;
     }, error => {
         Promise.reject(error);

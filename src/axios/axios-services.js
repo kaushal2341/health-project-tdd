@@ -2,7 +2,7 @@ import axios from 'axios';
 import { getHeaders, getHeadersForDocumentPost, errorHandler, convertObjectToRequestParam, createPathWithPathVariable } from './axios-helper'
 
 // const SERVER_DOMAIN_CURRENT = process.env.SERVER_DOMAIN;
-const SERVER_DOMAIN = "https://jsonplaceholder.typicode.com";
+const SERVER_DOMAIN = "http://10.13.184.15:9092/login-service";
 
 // ********************************* GET REQUESTS **********************************//
 // HTTP GET Request - Returns Resolved or Rejected Promise
@@ -50,7 +50,7 @@ export const getWithPagination = (path, paginationObject) => {
 const genericPostMethod = (path, data, headers) => {
     return new Promise((resolve, reject) => {
         axios.post(`${SERVER_DOMAIN}${path}`, data, headers)
-            .then(response => { resolve(response.data) })
+            .then(response => { resolve(response) })
             .catch(error => { reject(errorHandler(error)) });
     });
 };

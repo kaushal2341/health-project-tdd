@@ -68,10 +68,6 @@ describe('Password Input Simulation',()=>{
         simulationChange({target:{value:'sdsdsd'}})
         expect(onChangeMockFunc).toHaveBeenCalledTimes(1); 
     });
-    // it('should not call the onChange function when the input value length is less than 6',()=>{
-    //     simulationChange({target:{value:'abc'}});
-    //     expect(onChangeMockFunc).not.toBeCalled();
-    // });
     
     it('should have state of errorMsg ',()=>{
         expect(Object.keys(wrapper.state())).toContain('errorMsg');
