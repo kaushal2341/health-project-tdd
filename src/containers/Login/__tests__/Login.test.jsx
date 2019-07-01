@@ -127,8 +127,7 @@ describe('Login Container Testing', () => {
       it('should submit the form if all the value is  provided and donot provide errorMsg for form', () => {
         wrapper.setState({
           username: 'kaushal123',
-          password: 'flasher@123',
-          subDepartmentId: 1
+          password: 'flasher@123'
         })
         expect(wrapper.state('errorMsg').length).toBe(0)
       })
