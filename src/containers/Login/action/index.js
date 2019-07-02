@@ -1,4 +1,5 @@
+import {login} from './constants';
 export const authenticate = (data) => ({
      payload:data,
-     type:'LOGIN_AUTHENTICATE'
+     type:login.AUTH
 });

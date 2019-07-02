@@ -13,6 +13,6 @@ describe('Login Reducers Test' , () => {
         const newState = loginState(initialState,auth);
         expect(newState).toEqual({
             token:'abcdef'
-        })
-    })
+        });
+    });
 })
