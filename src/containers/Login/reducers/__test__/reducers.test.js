@@ -15,4 +15,11 @@ describe('Login Reducers Test' , () => {
             token:'abcdef'
         });
     });
+
+    it('should provide the same state  after no action dispatch',() => {
+      let initialState = {}
+      let auth = {type:'GET'}
+      const newState = loginState(initialState,auth);
+      expect(newState).toEqual({});
+  });
 })
