@@ -74,7 +74,7 @@ describe('Login Container Testing', () => {
   })
 
   it('should have state for all the input field except button', () => {
-    const states = ['username', 'password', 'errorMsg'];
+    const states = ['userCredential', 'password', 'errorMsg'];
     const statesFromComp = Object.keys(wrapper.state());
     states.map((state, i) => {
       expect(states).toContain(statesFromComp[i]);

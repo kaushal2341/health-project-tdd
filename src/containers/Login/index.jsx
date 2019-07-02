@@ -4,7 +4,7 @@ import { TextInput, PasswordInput, ButtonInput } from '../../common-ui';
 import { postRaw } from '../../axios';
 export default class Login extends React.PureComponent {
   state = {
-    username: '',
+    userCredential: '',
     password: '',
     errorMsg: []
   }
@@ -51,7 +51,7 @@ export default class Login extends React.PureComponent {
 
   apiCall = async () => {
     const data = {
-      username: this.state.username,
+      userCredential: this.state.userCredential,
       password: this.state.password
     }
     const response = postRaw('/api/login', data)
@@ -77,7 +77,7 @@ export default class Login extends React.PureComponent {
     return (
       <>
         <Form>
-          <TextInput placeholder="Username/Email" name="username" type="text" onChangeHandler={this.onChangeHandler} value={this.state.username}></TextInput>
+          <TextInput placeholder="Username/Email" name="userCredential" type="text" onChangeHandler={this.onChangeHandler} value={this.state.userCredential}></TextInput>
           <PasswordInput placeholder="Password" name="password" onChangeHandler={this.onChangeHandler} value={this.state.password}></PasswordInput>
           <ButtonInput type='submit' buttonName="Submit" onClickHandler={this.submitFormHandler} ></ButtonInput>
           <Message negative>

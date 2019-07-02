@@ -10,14 +10,14 @@ exports[`Login Container Testing Snap Shot Testing should create or match previo
       onSubmit={[Function]}
     >
       <TextInput
-        name="username"
+        name="userCredential"
         onChangeHandler={[Function]}
         placeholder="Username/Email"
         type="text"
         value=""
       >
         <Input
-          name="username"
+          name="userCredential"
           onChange={[Function]}
           placeholder="Username/Email"
           type="text"
@@ -27,7 +27,7 @@ exports[`Login Container Testing Snap Shot Testing should create or match previo
             className="ui input"
           >
             <input
-              name="username"
+              name="userCredential"
               onChange={[Function]}
               placeholder="Username/Email"
               type="text"

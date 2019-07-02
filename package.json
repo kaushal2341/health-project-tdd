@@ -100,7 +100,8 @@
     "collectCoverageFrom": [
       "src/**/*.{js,jsx,ts,tsx}",
       "!src/**/*.d.ts",
-      "!src/index.js"
+      "!src/index.js",
+      "!src/container/index.js"
     ],
     "setupFiles": [
       "<rootDir>/src/setup/setupTest",
