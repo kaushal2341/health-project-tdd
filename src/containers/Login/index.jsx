@@ -2,8 +2,6 @@ import React from 'react';
 import { Form, Message } from 'semantic-ui-react';
 import { TextInput, PasswordInput, ButtonInput } from '../../common-ui';
 import { postRaw } from '../../axios';
-import {connect} from 'react-redux';
-import {authenticate} from './action'
 export default class Login extends React.PureComponent {
   state = {
     userCredential: '',
@@ -92,11 +90,4 @@ export default class Login extends React.PureComponent {
     )
   }
 }
-const mapStateToProps = (state) => ({
-token:state.token
-})
-const mapDispatchToProps = () => ({
-  login:(data) => authenticate(data)
-})
 
-connect(mapStateToProps,mapDispatchToProps)(Login)

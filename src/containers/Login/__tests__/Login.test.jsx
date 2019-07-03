@@ -1,8 +1,4 @@
 import React from 'react';
-import configureMockStore from 'redux-mock-store';
-import {Provider} from 'react-redux';
-import {authenticate} from '../action';
-import {loginState} from '../reducers';
 import Login from '..';
 import {
   Form,
@@ -17,14 +13,10 @@ import {
 } from '../../../common-ui';
 expect.addSnapshotSerializer(enzymeSerializer);
 describe('Login Container Testing', () => {
-  let wrapper, wrapper1, mockStore,store,mockLoginfn;
+  let wrapper, wrapper1;
   beforeEach(() => {
     wrapper = mount(< Login />)
-    mockLoginfn=jest.fn();
-    mockStore = configureMockStore();
-    store = mockStore({});
-   
-    wrapper1 = shallow(<Login store={store} login={mockLoginfn}/>)
+    wrapper1 = shallow(<Login/>)
     
   }); afterEach(() => {
     wrapper.unmount()
@@ -144,18 +136,9 @@ describe('Login Container Testing', () => {
 
 });
 
-describe('Connection With Store Testing',() =>{
-  it('should have the intial state token defined and empty ',() => {
-    const auth=store.dispatch(authenticate("1234567"));
-    const token=loginState({},auth);  
-    console.log(wrapper1.instance())
-    expect(wrapper1.instance().props.store.token).toBeDefined();
-  });
-})
 
 describe('Snap Shot Testing', () => {
     it('should create or match previous snapshot of the component', () => {
-      
       expect(wrapper1).toMatchSnapshot();
     });
   });
