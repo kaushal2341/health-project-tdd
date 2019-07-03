@@ -2,6 +2,8 @@ import React from 'react';
 import { Form, Message } from 'semantic-ui-react';
 import { TextInput, PasswordInput, ButtonInput } from '../../common-ui';
 import { postRaw } from '../../axios';
+import {connect} from 'react-redux';
+import {authenticate} from './action'
 export default class Login extends React.PureComponent {
   state = {
     userCredential: '',
@@ -54,10 +56,9 @@ export default class Login extends React.PureComponent {
       userCredential: this.state.userCredential,
       password: this.state.password
     }
-    const response = postRaw('/api/login', data)
-                                .then(res => console.log(res))
-                                .catch(e => console.log(e));
-      
+    try {
+    const response =await postRaw('/api/login', data);
+    } catch(e) {}  
   }
 
   submitFormHandler = e => {
@@ -68,7 +69,8 @@ export default class Login extends React.PureComponent {
   }
 
   render() {
-    const depts = [{ key: '1', text: "Admin", value: "1" },
+    const depts = [
+    { key: '1', text: "Admin", value: "1" },
     { key: '2', text: "Pharmacy", value: "2" },
     { key: '3', text: "Finance", value: "3" }
     ]
@@ -90,3 +92,11 @@ export default class Login extends React.PureComponent {
     )
   }
 }
+const mapStateToProps = (state) => ({
+token:state.token
+})
+const mapDispatchToProps = () => ({
+  login:(data) => authenticate(data)
+})
+
+connect(mapStateToProps,mapDispatchToProps)(Login)

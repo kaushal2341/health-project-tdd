@@ -1,2 +1,3 @@
 import {createStore} from 'redux';
-export const store =createStore(()=>{console.log('hello')});
+import {loginState} from '../containers/Login/reducers'
+export const store =createStore(loginState);

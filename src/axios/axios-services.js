@@ -55,12 +55,8 @@ const genericPostMethod = (path, data, headers) => {
     });
 };
 
-export const postRaw = (path, data) => {
-    return new Promise((resolve, reject) => {
-        axios.post(`${SERVER_DOMAIN}${path}`, data)
-            .then(response => { resolve(response) })
-            .catch(error => { reject(errorHandler(error)) });
-    });
+export const postRaw = async (path, data) => {
+      await axios.post(`${SERVER_DOMAIN}${path}`, data)
 };
 
 export const post = (path, data) => {

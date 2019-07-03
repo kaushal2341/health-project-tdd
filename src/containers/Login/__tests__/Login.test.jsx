@@ -1,4 +1,8 @@
 import React from 'react';
+import configureMockStore from 'redux-mock-store';
+import {Provider} from 'react-redux';
+import {authenticate} from '../action';
+import {loginState} from '../reducers';
 import Login from '..';
 import {
   Form,
@@ -13,10 +17,15 @@ import {
 } from '../../../common-ui';
 expect.addSnapshotSerializer(enzymeSerializer);
 describe('Login Container Testing', () => {
-  let wrapper, wrapper1, wrapper2;
+  let wrapper, wrapper1, mockStore,store,mockLoginfn;
   beforeEach(() => {
     wrapper = mount(< Login />)
-    wrapper1 = shallow(< Login />)
+    mockLoginfn=jest.fn();
+    mockStore = configureMockStore();
+    store = mockStore({});
+   
+    wrapper1 = shallow(<Login store={store} login={mockLoginfn}/>)
+    
   }); afterEach(() => {
     wrapper.unmount()
   });
@@ -35,7 +44,7 @@ describe('Login Container Testing', () => {
 
   it('should have the give props available to Text Field', () => {
     const textProps = ['placeholder', 'name', 'type', 'onChangeHandler']
-    const textInputProps = Object.keys(wrapper.find(TextInput).props());
+    const textInputProps = Object.keys(wrapper1.find(TextInput).props());
     textProps.map((textProp, i) => {
       expect(textProps).toContain(textInputProps[i]);
     });
@@ -51,7 +60,7 @@ describe('Login Container Testing', () => {
 
   it('should have the given props available for password field', () => {
     const passProps = ['placeholder', 'name', 'onChangeHandler']
-    const passInputProps = Object.keys(wrapper.find(PasswordInput).props())
+    const passInputProps = Object.keys(wrapper1.find(PasswordInput).props())
     passProps.map((passProp, i) => {
       expect(passProps).toContain(passInputProps[i]);
     });
@@ -131,15 +140,23 @@ describe('Login Container Testing', () => {
         })
         expect(wrapper.state('errorMsg').length).toBe(0)
       })
-    })
+    });
 
+});
 
+describe('Connection With Store Testing',() =>{
+  it('should have the intial state token defined and empty ',() => {
+    const auth=store.dispatch(authenticate("1234567"));
+    const token=loginState({},auth);  
+    console.log(wrapper1.instance())
+    expect(wrapper1.instance().props.store.token).toBeDefined();
   });
+})
 
-  describe('Snap Shot Testing', () => {
+describe('Snap Shot Testing', () => {
     it('should create or match previous snapshot of the component', () => {
-      expect(wrapper).toMatchSnapshot();
+      
+      expect(wrapper1).toMatchSnapshot();
     });
   });
-
 });

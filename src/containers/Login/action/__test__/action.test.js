@@ -1,6 +1,13 @@
+import configureStore from 'redux-mock-store';
 import {authenticate} from '..'
 
 describe('Actions for login component testing', () => {
+    let mockStore,store;
+    beforeEach(() => {
+        mockStore = configureStore();
+        store = mockStore();
+    })  
+
     it('should be defined', () => { 
         expect(authenticate).toBeDefined();
     });
@@ -11,10 +18,11 @@ describe('Actions for login component testing', () => {
 
     it('aunthenticate action should return  the required object' , () => {
         let payload ={};
-        const auth =authenticate(payload);
-        expect(auth).toEqual({
-            payload:payload,
-            type:'LOGIN_AUTHENTICATE'
-        })
+        const expectedActions ={
+              'payload': '',
+              'type': 'LOGIN_AUTHENTICATE',
+        };
+        const auth =store.dispatch(authenticate(""));
+        expect(auth).toEqual(expectedActions);
     });
 })
