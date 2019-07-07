@@ -49,14 +49,22 @@ export default class Login extends React.PureComponent {
     return formStatus;
   }
 
-  apiCall = async () => {
+  apiCall = () => {
     const data = {
       userCredential: this.state.userCredential,
       password: this.state.password
     }
-    try {
-    const response =await postRaw('/api/login', data);
-    } catch(e) {}  
+    
+    if(this.props.getTokenAfterLogin){
+       console.log(data)
+       this.props.getTokenAfterLogin(data)
+    }   
+    // postRaw('/api/login', data).then(response =>{
+    //   this.props.submitHandler(response.data);  
+    //   console.log('helllo');
+    // }).catch(e => {
+    //   console.log('error');
+    // })  
   }
 
   submitFormHandler = e => {
@@ -79,7 +87,7 @@ export default class Login extends React.PureComponent {
         <Form>
           <TextInput placeholder="Username/Email" name="userCredential" type="text" onChangeHandler={this.onChangeHandler} value={this.state.userCredential}></TextInput>
           <PasswordInput placeholder="Password" name="password" onChangeHandler={this.onChangeHandler} value={this.state.password}></PasswordInput>
-          <ButtonInput type='submit' buttonName="Submit" onClickHandler={this.submitFormHandler} ></ButtonInput>
+          <ButtonInput id="f-submitter" type='submit' buttonName="Submit" onClickHandler={this.submitFormHandler} ></ButtonInput>
           <Message negative>
             {errorMsg.map((msg, i) => {
               return msg ? <p key={i} >{msg}</p> : ""

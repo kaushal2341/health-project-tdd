@@ -2,7 +2,7 @@ import axios from 'axios';
 import { getHeaders, getHeadersForDocumentPost, errorHandler, convertObjectToRequestParam, createPathWithPathVariable } from './axios-helper'
 
 // const SERVER_DOMAIN_CURRENT = process.env.SERVER_DOMAIN;
-const SERVER_DOMAIN = "http://10.13.184.15:9092/login-service";
+const SERVER_DOMAIN = "http://10.10.29.32:9092/login-service";
 
 // ********************************* GET REQUESTS **********************************//
 // HTTP GET Request - Returns Resolved or Rejected Promise

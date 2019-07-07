@@ -1,10 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Login Container Snap Shot Testing should create or match previous snapshot of the component 1`] = `
-<ContextProvider
-  value={null}
+<Connect(LoginContainer)
+  getTokenAfterLogin={[MockFunction]}
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
 >
   <LoginContainer
+    getTokenAfterLogin={[MockFunction]}
     login={[Function]}
     store={
       Object {
@@ -17,6 +28,199 @@ exports[`Login Container Snap Shot Testing should create or match previous snaps
       }
     }
     token=""
-  />
-</ContextProvider>
+  >
+    <Login
+      getTokenAfterLogin={[Function]}
+      token=""
+    >
+      <Form
+        as="form"
+      >
+        <form
+          className="ui form"
+          onSubmit={[Function]}
+        >
+          <TextInput
+            name="userCredential"
+            onChangeHandler={[Function]}
+            placeholder="Username/Email"
+            type="text"
+            value=""
+          >
+            <Input
+              name="userCredential"
+              onChange={[Function]}
+              placeholder="Username/Email"
+              type="text"
+              value=""
+            >
+              <div
+                className="ui input"
+              >
+                <input
+                  name="userCredential"
+                  onChange={[Function]}
+                  placeholder="Username/Email"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </Input>
+            <span
+              id="error"
+            />
+          </TextInput>
+          <PasswordInput
+            name="password"
+            onChangeHandler={[Function]}
+            placeholder="Password"
+            value=""
+          >
+            <Input
+              name="password"
+              onChange={[Function]}
+              placeholder="Password"
+              type="password"
+              value=""
+            >
+              <div
+                className="ui input"
+              >
+                <input
+                  name="password"
+                  onChange={[Function]}
+                  placeholder="Password"
+                  type="password"
+                  value=""
+                />
+              </div>
+            </Input>
+             
+            <ButtonInput
+              id="btn_error"
+              onClickHandler={[Function]}
+              size="tiny"
+            >
+              <Button
+                as="button"
+                id="btn_error"
+                onClick={[Function]}
+                size="tiny"
+              >
+                <Ref
+                  innerRef={
+                    Object {
+                      "current": <button
+                        class="ui tiny button"
+                        id="btn_error"
+                      >
+                        <i
+                          aria-hidden="true"
+                          class="icon eye slash"
+                        />
+                      </button>,
+                    }
+                  }
+                >
+                  <RefFindNode
+                    innerRef={
+                      Object {
+                        "current": <button
+                          class="ui tiny button"
+                          id="btn_error"
+                        >
+                          <i
+                            aria-hidden="true"
+                            class="icon eye slash"
+                          />
+                        </button>,
+                      }
+                    }
+                  >
+                    <button
+                      className="ui tiny button"
+                      id="btn_error"
+                      onClick={[Function]}
+                    >
+                      <Icon
+                        as="i"
+                        className="eye slash"
+                      >
+                        <i
+                          aria-hidden="true"
+                          className="icon eye slash"
+                          onClick={[Function]}
+                        />
+                      </Icon>
+                    </button>
+                  </RefFindNode>
+                </Ref>
+              </Button>
+            </ButtonInput>
+            <span
+              id="error"
+            />
+          </PasswordInput>
+          <ButtonInput
+            buttonName="Submit"
+            id="f-submitter"
+            onClickHandler={[Function]}
+            type="submit"
+          >
+            <Button
+              as="button"
+              id="f-submitter"
+              onClick={[Function]}
+              type="submit"
+            >
+              <Ref
+                innerRef={
+                  Object {
+                    "current": <button
+                      class="ui button"
+                      id="f-submitter"
+                      type="submit"
+                    >
+                      Submit
+                    </button>,
+                  }
+                }
+              >
+                <RefFindNode
+                  innerRef={
+                    Object {
+                      "current": <button
+                        class="ui button"
+                        id="f-submitter"
+                        type="submit"
+                      >
+                        Submit
+                      </button>,
+                    }
+                  }
+                >
+                  <button
+                    className="ui button"
+                    id="f-submitter"
+                    onClick={[Function]}
+                    type="submit"
+                  >
+                    Submit
+                  </button>
+                </RefFindNode>
+              </Ref>
+            </Button>
+          </ButtonInput>
+          <Message
+            negative={true}
+          >
+            <div
+              className="ui negative message"
+            />
+          </Message>
+        </form>
+      </Form>
+    </Login>
+  </LoginContainer>
+</Connect(LoginContainer)>
 `;

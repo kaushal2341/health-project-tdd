@@ -1,3 +1,3 @@
 export  const login={
-    AUTH:'LOGIN_AUTHENTICATE'
+     AUTH:'LOGIN_AUTHENTICATE'
 }

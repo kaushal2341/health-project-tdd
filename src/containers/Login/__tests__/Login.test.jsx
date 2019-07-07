@@ -63,7 +63,7 @@ describe('Login Container Testing', () => {
   });
 
   it('should have the given props available for button', () => {
-    const buttonProps = ['type', 'buttonName', 'onClickHandler']
+    const buttonProps = ['id','type', 'buttonName', 'onClickHandler']
     const buttonInputProps = Object.keys(wrapper1.find(ButtonInput).props())
     buttonProps.map((buttonProp, i) => {
       expect(buttonProps).toContain(buttonInputProps[i]);

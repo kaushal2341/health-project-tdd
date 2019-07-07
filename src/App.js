@@ -1,9 +1,9 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {Login} from './containers';
+import LoginContainer from './containers/Login/container';
 function App() {
-  return <Login/>
+  return <LoginContainer/>
 }
 
 export default App;
