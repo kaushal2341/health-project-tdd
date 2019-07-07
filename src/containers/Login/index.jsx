@@ -55,16 +55,13 @@ export default class Login extends React.PureComponent {
       password: this.state.password
     }
     
-    if(this.props.getTokenAfterLogin){
-       console.log(data)
-       this.props.getTokenAfterLogin(data)
-    }   
-    // postRaw('/api/login', data).then(response =>{
-    //   this.props.submitHandler(response.data);  
-    //   console.log('helllo');
-    // }).catch(e => {
-    //   console.log('error');
-    // })  
+       
+     postRaw('/api/login', data).then(response =>{
+      if(this.props.getTokenAfterLogin)
+        this.props.getTokenAfterLogin(response.data)
+      }).catch(e => {
+         this.props.getTokenAfterLogin("");
+      })  
   }
 
   submitFormHandler = e => {
